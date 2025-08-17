@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #ffe6f0;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      color: #ff3385;
+      margin-top: 20px;
+    }
+    .cards {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 200px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .gift-container {
+      margin-top: 40px; /* Push gift box down */
+    }
+    .gift {
+      width: 100px;
+      height: 120px;
+      background-color: #ff3385;
+      margin: 20px auto;
+      border-radius: 8px;
+      position: relative;
+      cursor: pointer;
+    }
+    .gift::before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 100%;
+      background: white;
+      left: 40px;
+    }
+    .gift::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 20px;
+      background: #ff3385;
+      top: -20px;
+      left: 0;
+      border-radius: 5px 5px 0 0;
+    }
+    .hidden {
+      display: none;
+    }
+    .surprise img {
+      width: 200px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎂 Happy Belated Birthday Dear Nivi 🎂</h1>
+  <p>11th January</p>
+
+  <div class="cards">
+    <div class="card">❤️ <b>Love</b><br>May your day be filled with endless love and care.</div>
+    <div class="card">✨ <b>Happiness</b><br>Wishing you pure joy and unforgettable smiles.</div>
+    <div class="card">🎁 <b>Surprises</b><br>Life has beautiful surprises just for you!</div>
+  </div>
+
+  <div class="gift-container">
+    <p>👉 Click here to open gift box</p>
+    <div class="gift" onclick="openGift()"></div>
+    <div class="surprise hidden" id="surprise">
+      <img src="https://www.clipartmax.com/png/middle/128-1283980_baby-panda-cliparts-8-panda-kawaii.png" alt="Cute Panda">
+      <p>🎉 Surprise! Wishing you endless joy 🐼💖</p>
+    </div>
+  </div>
+
+  <p>✨ made with ❤️ ✨</p>
+
+  <script>
+    function openGift() {
+      document.querySelector('.gift').style.display = 'none';
+      document.getElementById('surprise').classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
